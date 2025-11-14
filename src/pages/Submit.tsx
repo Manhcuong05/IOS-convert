@@ -7,11 +7,12 @@ export default function Submit() {
 
   const submit = async () => {
     try {
-      await fetch('https://webhook.site/1a2b3c4d-5e6f-7g8h-9i0j-klmnopqrstuv', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
+      await fetch('https://be-public.onrender.com/api/loan/apply', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(data),
+});
+
       alert('Gửi thành công! Chúng tôi sẽ liên hệ sớm.');
       sessionStorage.clear();
       navigate('/');
