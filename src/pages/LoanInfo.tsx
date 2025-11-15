@@ -7,7 +7,8 @@ export default function LoanInfo() {
 
   // Default values for quick testing
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+ const [phone, setPhone] = useState("");
+const [phoneError, setPhoneError] = useState("");
   const [cccd, setCccd] = useState("");
   const [cmndOld, setCmndOld] = useState("");
   const [insurance, setInsurance] = useState(false);
