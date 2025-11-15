@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import React from "react";
 
 // ✅ Cấu hình endpoint backend
-const API_BASE = "https://9f720fa89a2f.ngrok-free.app";
+const API_BASE = "https://be-public.onrender.com";
 const ENDPOINT = `${API_BASE}/api/webhook/fecredit`;
 
 // ✅ Hàm chuẩn hóa dữ liệu: loại bỏ ký tự tiền tệ "VNĐ", "." v.v.
@@ -15,10 +15,10 @@ const normalizeLoanData = (data: { amount: any; monthlyPayment: any; term: any; 
     ...data,
     amount: stripNum(data.amount),
     monthlyPayment: stripNum(data.monthlyPayment),
-    month: Number(data.term || data.month || 0),
-    term: undefined, // bỏ field trùng
+    term: Number(data.term || data.month || 0),   // CHỈ dùng term
   };
 };
+
 
 export default function Confirm() {
   const navigate = useNavigate();
