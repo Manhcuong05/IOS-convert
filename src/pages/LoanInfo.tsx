@@ -238,7 +238,6 @@ export default function LoanInfo() {
         <div className="bg-blue-50 rounded-xl p-4 flex mb-8 items-start">
           <Text className="text-2xl mr-3">Info</Text>
           <Text className="text-sm flex-1">
-            Đây là bản test – bạn có thể nhập gì cũng được
           </Text>
         </div>
 
