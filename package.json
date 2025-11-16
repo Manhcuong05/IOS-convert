@@ -24,6 +24,7 @@
   "dependencies": {
     "@capacitor/android": "^7.4.4",
     "@capacitor/core": "^7.4.4",
+    "@capacitor/ios": "^7.4.4",
     "canvas-confetti": "^1.9.4",
     "jotai": "^2.12.1",
     "react": "^18.3.1",
@@ -33,6 +34,7 @@
     "zmp-ui": "^1.11.12-7"
   },
   "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "^7.4.4",
     "@types/canvas-confetti": "^1.9.0",
     "@types/node": "^24.10.0",
