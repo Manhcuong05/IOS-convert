@@ -125,6 +125,10 @@ export default function LoanInfo() {
 
         {/* ==== THANH KÉO SỐ TIỀN VAY ĐƯA LÊN TRƯỚC ==== */}
         <Text className="font-bold mb-2">Số tiền cần vay</Text>
+        <Text className="text-green-600 font-semibold mb-1">
+          {formatVND(amount)} đ
+        </Text>
+
         <div className="mb-6">
           <Slider
             min={5_000_000}
@@ -132,9 +136,10 @@ export default function LoanInfo() {
             step={1_000_000}
             value={amount}
             onChange={(v) => setAmount(Array.isArray(v) ? v[0] : v)}
-            label={`${formatVND(amount)} VND`}
+            label=""   
           />
         </div>
+
 
         {/* ==== BOX MỖI THÁNG PHẢI TRẢ (NGUYÊN UI) ==== */}
         <div className="bg-green-600 text-white rounded-2xl p-6 mb-6 text-center">
