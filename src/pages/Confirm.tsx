@@ -6,7 +6,6 @@ import React from "react";
 const API_BASE = "https://be-public.onrender.com";
 const ENDPOINT = `${API_BASE}/api/webhook/fecredit`;
 
-// ✅ Hàm chuẩn hóa dữ liệu: loại bỏ ký tự tiền tệ "VNĐ", "." v.v.
 const normalizeLoanData = (data: { amount: any; monthlyPayment: any; term: any; month: any; }) => {
   const stripNum = (v: string) =>
     typeof v === "string" ? Number(v.replace(/[^\d]/g, "")) : v;
@@ -15,7 +14,7 @@ const normalizeLoanData = (data: { amount: any; monthlyPayment: any; term: any; 
     ...data,
     amount: stripNum(data.amount),
     monthlyPayment: stripNum(data.monthlyPayment),
-    term: Number(data.term || data.month || 0),   // CHỈ dùng term
+    term: Number(data.term || data.month || 0),   
   };
 };
 
@@ -63,12 +62,10 @@ export default function Confirm() {
 
   return (
     <Page className="bg-white">
-      {/* Header */}
       <div className="bg-green-600 text-white text-center py-4">
         <Text className="text-xl font-bold">FE Credit</Text>
       </div>
 
-      {/* Navigation Steps */}
       <div className="flex justify-around border-b px-6">
         <Text className="py-3 text-gray-500">Thông tin</Text>
         <Text className="py-3 font-bold border-b-4 border-green-600">
@@ -77,7 +74,6 @@ export default function Confirm() {
         <Text className="py-3 text-gray-500">Hoàn tất</Text>
       </div>
 
-      {/* Nội dung */}
       <Box className="px-6 pt-6">
         <div className="flex justify-between items-center mb-6">
           <Text className="text-xl font-bold">Thông tin người vay</Text>
@@ -89,7 +85,6 @@ export default function Confirm() {
           </Text>
         </div>
 
-        {/* Thông tin cá nhân */}
         <div className="space-y-4 mb-8">
           <div className="flex justify-between">
             <Text>Họ và tên</Text>
@@ -105,7 +100,6 @@ export default function Confirm() {
           </div>
         </div>
 
-        {/* Thông tin khoản vay */}
         <Text className="text-xl font-bold mb-4">Thông tin gói vay</Text>
         <div className="bg-gray-100 rounded-xl p-5 space-y-4">
           <div className="flex justify-between">
@@ -136,7 +130,6 @@ export default function Confirm() {
           </div>
         </div>
 
-        {/* Cam kết */}
         <div className="mt-8 space-y-3 text-sm">
           <Text>• Tôi xác nhận các thông tin trên là chính xác.</Text>
           <Text>
@@ -145,7 +138,6 @@ export default function Confirm() {
           </Text>
         </div>
 
-        {/* Nút gửi */}
         <Button
           className="w-full bg-green-600 text-white font-bold text-lg rounded-full mt-10"
           size="large"

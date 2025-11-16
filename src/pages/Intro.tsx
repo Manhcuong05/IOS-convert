@@ -19,9 +19,9 @@ export default function Intro() {
         </div>
 
         <Text className="text-xl md:text-2xl font-medium text-center mb-12 leading-relaxed opacity-95 animate-fade-in-delay">
-          Vay vốn <span className="font-bold text-yellow-300">chỉ trong 3 phút</span>
+          Giải pháp <span className="font-bold text-yellow-300">tài chính nhanh chóng</span>
           <br />
-          qua công ty uy tín
+          dành cho mọi nhu cầu của bạn
         </Text>
 
         <Button
@@ -31,11 +31,11 @@ export default function Intro() {
           size="large"
           onClick={() => navigate('/terms')}
         >
-          Bắt đầu ngay
+          Bắt đầu đăng ký
         </Button>
 
         <Text className="mt-8 text-xs opacity-70 animate-fade-in-delay-2">
-          Được tin dùng bởi hơn 1 khách hàng (it's a me)
+          Sản phẩm được phát triển nhằm mang lại trải nghiệm vay minh bạch – tiện lợi – bảo mật.
         </Text>
       </Box>
     </Page>
@@ -43,6 +43,7 @@ export default function Intro() {
 }
 
 
+// ================== Animation CSS giữ nguyên ==================
 const styles = `
 <style>
   @keyframes fadeIn {
